@@ -3,9 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFolderPlus } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import Swal from "sweetalert2";
 import {leerProductosAPI } from "../../helpers/queries";
 import ItemProducto from './producto/ItemProducto'
+import Swal from "sweetalert2";
+
 
 const Administrador = () => {
   const [productos, setProductos] = useState([]);
@@ -16,12 +17,26 @@ const Administrador = () => {
 
   const traerProductos = async () => {
     try {
-      const listaProductosAPI = await leerProductosAPI();
+      const respuesta = await leerProductosAPI();
+      console.log(respuesta)
+      if(respuesta.status === 200){
+      const listaProductosAPI = await respuesta
+      setProductos(listaProductosAPI);
+      }
+      const listaProductosAPI = await respuesta
       setProductos(listaProductosAPI);
     } catch (error) {
       console.log(error);
+      Swal.fire({
+        title: "Ocurrió un error en el servidor",
+        text: "Intente realizar esta acción en unos minutos",
+        icon: "error",
+      });
     }
   };
+
+
+  
 
   const borrarProductoAPI = async (id) => {
     Swal.fire({

@@ -4,22 +4,33 @@ import { leerProductosAPI } from "../../helpers/queries";
 import { useEffect, useState } from "react";
 import CardProducto from "./producto/CardProducto";
 import logoCafe from "../../assets/coffee-cups.png";
+import Swal from "sweetalert2";
 
 const Inicio = () => {
   const [productos, setProductosInicio] = useState([]);
 
   useEffect(() => {
-   leerProductosInicio(); 
+    leerProductosInicio();
   }, []);
 
-const leerProductosInicio = async () => {
+  const leerProductosInicio = async () => {
     try {
-      const productosAPIinicio = await leerProductosAPI();
+      const respuesta = await leerProductosAPI();
+      if (respuesta.status === 200) {
+        const productosAPIinicio = await respuesta;
+        setProductosInicio(productosAPIinicio);
+      }
+      const productosAPIinicio = await respuesta;
       setProductosInicio(productosAPIinicio);
     } catch (error) {
+      Swal.fire({
+        title: "Ocurrió un error en el servidor",
+        text: "Intente realizar esta acción en unos minutos",
+        icon: "error",
+      });
       console.log(error);
     }
-  }; 
+  };
 
   return (
     <>
