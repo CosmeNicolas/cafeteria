@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit&display=swap');
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-family: 'Outfit', sans-serif;
+}
+
+.title {
+  font-family: 'Outfit', sans-serif;
+}
+
+.card {
+  background-color: #003c2507;
+}
+
+.bg-green {
+  background-color: #003c25;
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.imagen-banner {
+  object-fit: cover;
+  height: 550px;
+}
+
+.img-card-inicio {
+  width: auto;
+  height: 350px;
+  object-fit: cover;
+}
+
+.contenedor-img-detalle {
+  width: 100%;
+  object-fit: cover;
+}
+
+.img-detalle {
+  height: 500px;
+  object-fit: cover;
+}
+
+.formulario {
+  background: rgba(205, 204, 204, 0.644);
+  box-shadow: 0 8px 32px 0 rgba(87, 87, 87, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+}
+
+.img-admin-producto {
+  height: 100px;
+  width: 100px;
+}
+
+.fondo-login {
+  flex-grow: 1;
+  background-image: url('./assets/imagen-cafeteria.jpg');
+  background-size: cover;
+  /* Esto ajusta la imagen para cubrir todo el fondo */
+  background-position: center;
+  /* Esto centra la imagen en el fondo */
+  background-repeat: no-repeat;
+  /* Esto evita que la imagen se repita */
+}
+
+.container-login {
+  background: rgba(44, 46, 52, 0.529);
+  box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.37);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+}
+
+
+.navbar {
+  background-color: #ffffffcd;
+  font-family: 'Outfit', sans-serif;
+}
+
+
+/* imagen banner responsive */
+@media only screen and (max-width: 991px) {
+
+  .imagen-banner {
+    object-fit: cover;
+    height: 300px;
+  }
+
+  .contenedor-detalle {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+}
+
+@media only screen and (max-width: 767px) {
+  .imagen-banner {
+    object-fit: cover;
+    height: 325px;
+  }
+
+  .contenedor-detalle {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .img-card-inicio {
+    height: 400px;
+    width: auto;
+  }
+
+  .color {
+    color: #003c25;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .img-card-inicio {
+    height: 350px;
+    width: auto;
+  }
+}

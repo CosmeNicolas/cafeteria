@@ -1,0 +1,39 @@
+{
+  "productos": [
+    {
+      "nombreProducto": "cafe rico",
+      "precio": "1500",
+      "imagen": "https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg",
+      "categoria": "infusiones",
+      "descripcion_breve": "cafe rico",
+      "descripcion_amplia": "cafe de especialidad ",
+      "id": "de48"
+    },
+    {
+      "id": "e715",
+      "nombreProducto": "Cafe molido premium",
+      "precio": "3000",
+      "imagen": "https://images.pexels.com/photos/11069888/pexels-photo-11069888.jpeg",
+      "categoria": "materiaPrima",
+      "descripcion_breve": "cafe molido con tonos de nuez y sabor intenso"
+    },
+    {
+      "id": "a0ed",
+      "nombreProducto": "Mini Torta Chocolate ",
+      "precio": "1952",
+      "imagen": "https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg",
+      "categoria": "panaderiaDulce",
+      "descripcion_breve": "Mini Torta Chocolate",
+      "descripcion_amplia": "Cada bocado revela un equilibrio perfecto entre la decadencia del cacao y la dulzura "
+    },
+    {
+      "id": "8735",
+      "nombreProducto": "Brownie Chocolate",
+      "precio": "1325",
+      "imagen": "https://images.pexels.com/photos/2067396/pexels-photo-2067396.jpeg",
+      "categoria": "bocadillos",
+      "descripcion_breve": "Brownie: Puro placer chocolatoso!",
+      "descripcion_amplia": "Sumérgete en el deleite con nuestro brownie chocolatoso: una fusión perfecta de ricos sabores de chocolate en cada mordisco, una experiencia divina e indulgente."
+    }
+  ]
+}
