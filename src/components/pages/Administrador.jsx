@@ -37,7 +37,7 @@ const Administrador = () => {
         try {
           const respuesta = await borrarProductoAPI(id);
           if (respuesta.status === 200) {
-            const productosActualizados = await leerProductosApi()
+            const productosActualizados = await leerProductosAPI()
             setProductos(productosActualizados)
             traerProductos();
             Swal.fire({
