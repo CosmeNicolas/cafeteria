@@ -7,7 +7,7 @@ const CardProducto = ({ productos }) => {
       <Container>
         <Row>
           {productos.map((producto) => (
-            <Col key={producto.id} lg={3} md={6}>
+            <Col key={producto._id} lg={3} md={6}>
               <Card className="my-3 mx-1">
                 <Card.Img
                   variant="top"
@@ -24,7 +24,7 @@ const CardProducto = ({ productos }) => {
                   <Link
                     className="btn btn-success title"
                     variant="success"
-                    to={`administrador/detalle/${producto.id}`}
+                    to={`administrador/detalle/${producto._id}`}
                   >
                     Ver Producto
                   </Link>

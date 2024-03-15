@@ -89,7 +89,7 @@ const Administrador = () => {
           </Link>
         </div>
         <hr />
-        <Table responsive striped bordered hover variant="dark" size="sm">
+        <Table responsive striped bordered hover  >
           <thead>
             <tr>
               <th>Cod</th>
@@ -103,7 +103,7 @@ const Administrador = () => {
           <tbody>
             {productos.map((producto) => (
               <ItemProducto
-                key={producto.id}
+                key={producto._id}
                 producto={producto}
                 setProductos={setProductos}
               />

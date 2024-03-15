@@ -22,7 +22,7 @@ const ItemProducto = ({ producto, setProductos }) => {
       cancelButtonText: "Cancelar",
     }).then(async (result) => {
       if (result.isConfirmed) {
-        const respuesta = await borrarProductoAPI(producto.id);
+        const respuesta = await borrarProductoAPI(producto._id);
         if (respuesta.status === 200) {
           //actualizar la tabla
           const productosActualizados = await leerProductosAPI();
@@ -46,8 +46,8 @@ const ItemProducto = ({ producto, setProductos }) => {
 
   return (
     <>
-      <tr key={producto.id}>
-        <td>{producto.id}</td>
+      <tr key={producto._id}>
+        <td>{producto._id}</td>
         <td>{producto.nombreProducto}</td>
         <td>${producto.precio}</td>
         <td>
@@ -62,7 +62,7 @@ const ItemProducto = ({ producto, setProductos }) => {
           <Link
             variant="warning"
             className="me-1 btn btn-warning"
-            to={`/administrador/editar/${producto.id}`}
+            to={`/administrador/editar/${producto._id}`}
           >
             <FontAwesomeIcon icon={faPenToSquare} />
           </Link>
