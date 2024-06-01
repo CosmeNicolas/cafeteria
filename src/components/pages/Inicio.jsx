@@ -1,4 +1,4 @@
-import { Container, Button, Card, Image, Row, Col } from "react-bootstrap";
+import { Image } from "react-bootstrap";
 import cafeteria from "../../assets/cafeteria-salon.jpg";
 import { leerProductosAPI } from "../../helpers/queries";
 import { useEffect, useState } from "react";
